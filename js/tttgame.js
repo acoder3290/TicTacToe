@@ -7,7 +7,7 @@ function TTTGame(squares){
     this.players[1] = new Player('Doe', 'O');
 
     this.getCurrentPlayer = function(){
-        return this.players[ this.board.filledSquare %2 ];
+        return this.players[ this.board.filledSquares %2 ];
     };
 
     //I have written this as dummy method which should be replaced with actual logic
