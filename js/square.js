@@ -1,21 +1,14 @@
 //Square class
 function Square(){
     this.symbol = "";
-    this.isOccupied = false;
 }
 
 //Based on player turn set symbols
 Square.prototype.setSymbol = function(value){
-    if(value !== 'X' && value !== 'O'){
-        return 'Please enter X or O';
-    }else if(this.isOccupied){
-        return 'This square is already filler'
-    }else{
-        this.symbol = value;
-        this.isOccupied = true;
-    }
+    this.symbol = value;
 };
 
-Square.prototype.getSymbol = function(){
-    return this.symbol;
-};
+//To check square has symbol
+Square.prototype.isOccupied(){
+    return this.symbol ? true : false;
+}
