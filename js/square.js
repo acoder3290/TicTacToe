@@ -9,6 +9,6 @@ Square.prototype.setSymbol = function(value){
 };
 
 //To check square has symbol
-Square.prototype.isOccupied(){
+Square.prototype.isOccupied = function(){
     return this.symbol ? true : false;
 }
