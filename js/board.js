@@ -27,9 +27,14 @@ Board.prototype.displayBoard = function(){
     var i, j,board = "";
     for(i = 0; i < this.size; i++){
         for(j = 0; j < this.size; j++){
-            board += this.grid[i][j].symbol +' - ';
+            board += ` ${this.grid[i][j].symbol || '-'} `;
         }
         board += '\n';
     }
     console.log(board);
+};
+
+Board.prototype.printMove = function(){
+    console.log(`======= MOVE #${this.filledSquares} =======`);
+    this.displayBoard();
 };
